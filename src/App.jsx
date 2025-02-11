@@ -1,7 +1,7 @@
 function App() {
   return (
     <div>
-      <p className="text-blue-400">hello</p>
+      <p className="text-blue-400">amogha is gay</p>
     </div>
   );
 }
