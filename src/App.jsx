@@ -1,11 +1,14 @@
 import Footer from "./components/footer";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div>
       <Navbar />
-      <p className="text-blue-400">amogha is gay</p>
+
+      <Home />
+
       <Footer />
     </div>
   );
