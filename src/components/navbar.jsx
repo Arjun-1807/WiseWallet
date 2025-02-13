@@ -1,6 +1,13 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="bg-gray-900 text-white px-4">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
@@ -15,11 +22,11 @@ function Navbar() {
             Get Started
           </button>
           <button
-            data-collapse-toggle="navbar-sticky"
+            onClick={toggleMenu}
             type="button"
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-800"
             aria-controls="navbar-sticky"
-            aria-expanded="false"
+            aria-expanded={isMenuOpen}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -40,7 +47,9 @@ function Navbar() {
           </button>
         </div>
         <div
-          className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } items-center justify-between w-full md:flex md:w-auto md:order-1`}
           id="navbar-sticky"
         >
           <ul className="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-900 md:flex-row md:space-x-8 md:mt-0 md:border-0">

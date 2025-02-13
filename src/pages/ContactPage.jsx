@@ -20,9 +20,9 @@ const ContactPage = () => {
 
   return (
     <div className="bg-gray-900 min-h-screen flex items-center justify-center px-4">
-      <div className="flex flex-col md:flex-row items-center justify-center p-6 bg-gray-800 rounded-2xl shadow-2xl space-y-6 md:space-y-0 md:space-x-6">
+      <div className="flex flex-col md:flex-row items-center justify-center p-6 bg-gray-800 rounded-2xl shadow-2xl  md:space-y-0 md:space-x-6">
         {/* Left Side Image */}
-        <div className="hidden md:block md:w-1/2 p-4">
+        <div className="hidden md:block md:w-1/2 md:p-4">
           <img
             src="https://images.pexels.com/photos/7682340/pexels-photo-7682340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             alt="Man on phone"
