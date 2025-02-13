@@ -23,8 +23,7 @@ function App() {
     <div>
       <Navbar />
 
-      <Home />
-      {/* for testing */}
+
       <ContactPage />
       <Footer />
     </div>
