@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <main className="container mx-auto px-6 py-20 bg-gray-800">
       <div className="flex flex-col md:flex-row items-center justify-between">
@@ -12,9 +16,12 @@ function Home() {
           </p>
           <div className="flex space-x-4">
             <button className="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors text-white">
-              Get Started Free
+              Get Started
             </button>
-            <button className="border border-gray-700 px-6 py-3 rounded-lg hover:border-blue-500 transition-colors text-gray-400">
+            <button
+              className="border border-gray-700 px-6 py-3 rounded-lg hover:border-blue-500 transition-colors text-gray-400"
+              onClick={() => navigate("/Services")}
+            >
               Learn More
             </button>
           </div>
