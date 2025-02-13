@@ -1,10 +1,12 @@
+import { NavLink } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="bg-gray-900 text-white px-4">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-        <a href="/" className="flex items-center space-x-3">
+        <NavLink to="/" className="flex items-center space-x-3">
           <span className="text-2xl font-bold">Wise Wallet</span>
-        </a>
+        </NavLink>
         <div className="flex md:order-2 space-x-3">
           <button
             type="button"
@@ -43,36 +45,52 @@ function Navbar() {
         >
           <ul className="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-900 md:flex-row md:space-x-8 md:mt-0 md:border-0">
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-white hover:text-blue-500"
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `block py-2 px-3 ${
+                    isActive ? "text-blue-500" : "text-white"
+                  } hover:text-blue-500`
+                }
               >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-400 hover:text-blue-500"
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `block py-2 px-3 ${
+                    isActive ? "text-blue-500" : "text-white"
+                  } hover:text-blue-500`
+                }
               >
                 About
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-400 hover:text-blue-500"
+              <NavLink
+                to="/services"
+                className={({ isActive }) =>
+                  `block py-2 px-3 ${
+                    isActive ? "text-blue-500" : "text-white"
+                  } hover:text-blue-500`
+                }
               >
                 Services
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-400 hover:text-blue-500"
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `block py-2 px-3 ${
+                    isActive ? "text-blue-500" : "text-white"
+                  } hover:text-blue-500`
+                }
               >
                 Contact
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
