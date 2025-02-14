@@ -59,12 +59,6 @@ const About = () => {
             </p>
           </div>
         </div>
-
-        <div className="mt-12">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-md font-semibold text-lg shadow-md transition">
-            Learn More
-          </button>
-        </div>
       </div>
     </main>
   );
