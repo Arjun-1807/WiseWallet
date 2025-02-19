@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Home() {
   const navigate = useNavigate();
@@ -15,9 +15,11 @@ function Home() {
             and investment insights. Your path to financial freedom starts here.
           </p>
           <div className="flex space-x-4">
-            <button className="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors text-white">
-              Get Started
-            </button>
+            <Link to="/Login">
+              <button className="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors text-white">
+                Get Started
+              </button>
+            </Link>
             <button
               className="border border-gray-700 px-6 py-3 rounded-lg hover:border-blue-500 transition-colors text-gray-400"
               onClick={() => navigate("/Services")}
